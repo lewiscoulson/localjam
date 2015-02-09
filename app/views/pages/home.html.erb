@@ -1,5 +1,9 @@
 <div ng-app="localjam">
   <div ng-controller="mainCtrl">
-    <div>{{hello}}</div>
+    <div class="lessons">
+      <div ng-repeat="lesson in lessons">
+        {{lesson.title}}
+      </div>
+    </div>
   </div>
 </div>
