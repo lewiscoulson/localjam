@@ -1,0 +1,20 @@
+<%= form_for @lesson do |f| %>
+  <div>
+    <%= f.label :title %>
+    <%= f.text_field :title %>
+  </div>
+
+  <div>
+    <%= f.label :video %>
+    <%= f.text_field :video %>
+  </div>
+
+  <div>
+    <%= f.label :notes %>
+    <%= f.text_area :notes %>
+  </div>
+
+  <div>
+    <%= f.submit "Create" %>
+  </div>
+<% end %>

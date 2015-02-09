@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Localjam</title>
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular.min.js' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular-resource.js' %>
+  <%= javascript_include_tag 'https://ajax.googleapis.com/ajax/libs/angularjs/1.3.12/angular-route.js' %>
+
+  <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<%= yield %>
+
+</body>
+</html>
