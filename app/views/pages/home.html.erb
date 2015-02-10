@@ -1,16 +1,39 @@
-<div ng-app="localjam">
-  <div ng-controller="mainCtrl">
-    <div class="lessons" ng-show="isShowLessons">
-    	<h2>Lessons</h2>
-      <div ng-repeat="lesson in lessons">
-        <a href="" ng-click="showLesson(lesson)">{{lesson.title}}</a>
-      </div>
+<div ng-app="localjam" class="jumbotron">
+<div class="container-fluid"  ng-controller="mainCtrl">
+  <div class="row">
+    <div class="col-md-6">
+      <h1>Localjam</h1>
     </div>
-    <div class="lesson" ng-show="isShowLesson">
-    	<h2>{{activeLesson.title}}</h2>
-    	<video src="{{activeLesson.video}}"></video>
-    	<p>{{activeLesson.notes}}</p>
-    	<a href="" ng-click="showLessons()">Back to Lessons</a>
+    <div class="col-md-6">
+      <ul class="nav navbar-nav">
+        <li class="active"><a href="" ng-click="showLessons()">Lessons</a></li>
+        <li class="active"><a href="" ng-click="showAbout()">About</a></li>
+        <li class="active"><a href="" ng-click="showContact()">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-12">
+      <div>
+        <div class="lessons" ng-show="isShowLessons">
+        	<h2>Lessons</h2>
+          <div ng-repeat="lesson in lessons">
+            <a href="" ng-click="showLesson(lesson);">{{lesson.title}}</a>
+          </div>
+        </div>
+        <div class="lesson" ng-show="isShowLesson">
+        	<h2>{{activeLesson.title}}</h2>
+        	<video src="{{activeLesson.video}}"></video>
+        	<p>{{activeLesson.notes}}</p>
+        	<a href="" ng-click="showLessons()">Back to Lessons</a>
+        </div>
+        <div class="about" ng-show="isShowAbout">
+          <h2>about</h2>
+        </div>
+        <div class="contact" ng-show="isShowContact">
+          <h2>contact</h2>
+        </div>
+      </div>
     </div>
   </div>
 </div>
