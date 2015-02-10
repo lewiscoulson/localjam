@@ -22,6 +22,20 @@ class LessonsController < ApplicationController
     end
   end
 
+  def edit
+    @lesson = Lesson.find(params[:id])
+  end
+
+  def update
+    @lesson = Lesson.find(params[:id])
+
+    if @lesson.update(secure_params)
+      redirect_to @lesson
+    else
+      render 'edit'
+    end
+  end
+
   private
     def secure_params
       params.require(:lesson).permit(:title, :video, :notes)
