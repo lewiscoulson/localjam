@@ -1,9 +1,15 @@
 <div ng-app="localjam">
   <div ng-controller="mainCtrl">
-    <div class="lessons">
+    <div class="lessons" ng-show="isShowLessons">
       <div ng-repeat="lesson in lessons">
-        {{lesson.title}}
+        <a href="" ng-click="showLesson(lesson)">{{lesson.title}}</a>
       </div>
+    </div>
+    <div class="lesson" ng-show="isShowLesson">
+    	<h2>{{activeLesson.title}}</h2>
+    	<video src="{{activeLesson.video}}"></video>
+    	<p>{{activeLesson.notes}}</p>
+    	<a href="" ng-click="showLessons()">Back to Lessons</a>
     </div>
   </div>
 </div>
