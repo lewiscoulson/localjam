@@ -18,7 +18,7 @@
         <div class="lessons" ng-show="isShowLessons">
         	<h2 class="lead">Lessons</h2>
           <div ng-repeat="lesson in lessons">
-            <a href="" ng-click="showLesson(lesson);">{{lesson.title}}</a>
+            <a href="" ng-click="showLesson(lesson);" class="btn btn-default">{{lesson.title}}</a>
           </div>
         </div>
         <div class="lesson" ng-show="isShowLesson">
